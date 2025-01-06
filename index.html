@@ -4,33 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse; /* Spojí ohraničení buněk */
+            background-color: #ffcc00; /* Žluté pozadí pro celou tabulku */
+        }
+        th, td {
+            border: 2px solid #000000; /* Černé ohraničení pro každou buňku */
+            padding: 10px; /* Větší mezera kolem textu v buňkách */
+            text-align: center; /* Zarovnání textu na střed */
+        }
+        th {
+            background-color: #ff5733; /* Červené pozadí pro hlavičky */
+            color: white; /* Bílé písmo pro hlavičky */
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2; /* Světle šedé pozadí pro sudé řádky */
+        }
+        tr:nth-child(odd) {
+            background-color: #ffb3b3; /* Světle růžové pozadí pro liché řádky */
+        }
+    </style>
 </head>
 <body>
     <h1>ahoj</h1>
     <table>
         <thead>
             <tr>
-                <th>
-                    Buňka1
-                </th>
-                <th>
-                    Pondělí 
-                </th>
-                <th>
-                    Neděle
-                </th>
+                <th>Buňka1</th>
+                <th>Pondělí</th>
+                <th>Neděle</th>
             </tr>
         </thead>
         <tbody>
-            <td>
-                Buňka 2
-            </td>
-            <td>
-                úterý
-            </td>
-            <td>
-                Neděle
-            </td>
+            <tr>
+                <td>Buňka 2</td>
+                <td>úterý</td>
+                <td>Neděle</td>
+            </tr>
         </tbody>
     </table>
 </body>
