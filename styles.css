@@ -1,3 +1,22 @@
-body{
-    background: linear-gradient(to right, red, yellow, green, blue, purple, pink, brown, beige, orange);
+@keyframes changeBackground {
+    0% {
+        background: linear-gradient(to right, red, yellow, green, blue, purple, pink, brown, beige, orange);
+    }
+    25% {
+        background: linear-gradient(to right, orange, beige, brown, pink, purple, blue, green, yellow, red);
+    }
+    50% {
+        background: linear-gradient(to right, green, blue, purple, pink, brown, beige, orange, red, yellow);
+    }
+    75% {
+        background: linear-gradient(to right, purple, pink, brown, beige, orange, red, yellow, green, blue);
+    }
+    100% {
+        background: linear-gradient(to right, red, yellow, green, blue, purple, pink, brown, beige, orange);
+    }
+}
+
+body {
+    animation: changeBackground 10s infinite;
+    background-size: 400% 400%;
 }
