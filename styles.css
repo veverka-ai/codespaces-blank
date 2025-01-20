@@ -19,6 +19,7 @@
 body {
     animation: changeBackground 10s infinite;
     background-size: 400% 400%;
+}
 
 .sloupce {
     width:100%;
@@ -26,7 +27,7 @@ body {
     display: flex;
 }
 
-}
+
 .obrazek{
 width:33%;
 height:auto;
