@@ -5,6 +5,7 @@
 }
 
 .header{
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(https://frankfurterkuechenstudio.de/wp-content/uploads/2023/11/matte-Kueche-im-Bauernhausstil-Frankfurt-am-Main-768x768.png)
-    
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(https://frankfurterkuechenstudio.de/wp-content/uploads/2023/11/matte-Kueche-im-Bauernhausstil-Frankfurt-am-Main-768x768.png);
+    height: 100vh;
+    background-size: cover;
 }
