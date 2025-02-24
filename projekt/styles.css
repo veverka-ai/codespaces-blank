@@ -6,21 +6,26 @@ body, h1, h2, p, ul {
 
 /* Styl pro hlavičku */
 header {
-    background-color: #c0100a;
+    background-color: #4CAF50;
     color: white;
     padding: 20px;
     text-align: center;
 }
 
 /* Styl pro navigaci */
+nav {
+    display: flex;
+    justify-content: center; /* Centering the menu */
+    background-color: #333;
+}
+
 nav ul {
     list-style-type: none;
-    background-color: #333;
-    overflow: hidden;
+    display: flex; /* Ensure the list items are in a row */
+    padding: 0;
 }
 
 nav ul li {
-    float: left;
     position: relative;
 }
 
@@ -69,6 +74,7 @@ nav ul li:hover .submenu {
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 20px;
+    background-color: #D32F2F; /* Červené pozadí pro recepty */
 }
 
 .recipe {
@@ -78,6 +84,7 @@ nav ul li:hover .submenu {
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white; /* Bílý pozadí pro každou kartu receptu */
 }
 
 .recipe img {
