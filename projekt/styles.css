@@ -3,9 +3,18 @@
     padding: 0px;
     font-family: Century;
 }
+body {
+    margin: 0; /* Odstraní výchozí okraje */
+    height: 100%; /* Nastaví výšku na 100% pro celé tělo */
+}
 
-header{
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('https://frankfurterkuechenstudio.de/wp-content/uploads/2023/11/matte-Kueche-im-Bauernhausstil-Frankfurt-am-Main-768x768.png');
-    height: 100vh;
-    background-size: cover;
+
+header {
+    background-image: url('https://frankfurterkuechenstudio.de/wp-content/uploads/2023/11/matte-Kueche-im-Bauernhausstil-Frankfurt-am-Main-768x768.png');
+    height: 100vh; /* Výška hlavičky na 100% výšky okna */
+    background-size: cover; /* Obrázek pokryje celé pozadí */
+    background-position: center; /* Obrázek bude centrovaný */
+    background-attachment: fixed; /* Obrázek se nebude posouvat při rolování */
+=======
+
 }
