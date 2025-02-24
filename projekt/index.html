@@ -1,23 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
-    <title>RECEPT</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recepty</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <div class="main">
-            <ul>
-                <li><a href="#">Domov</a></li>
-                <li><a href="#">O nás</a></li>
-                <li><a href="#">Dezerty</a></li>
-                <li><a href="#">Předkrmy</a></li>
-                <li><a href="#">Těstoviny</a></li>
-                <li><a href="#">Saláty</a></li>
-                <li><a href="#">Burgry</a></li>
-                <li><a href="#">Pizza</a></li>
-            </ul>
-        </div>
+        <h1>Recepty</h1>
     </header>
+
+    <nav>
+        <ul>
+            <li><a href="#" onclick="toggleMenu('pastas')">Těstoviny</a>
+                <ul id="pastas" class="submenu">
+                    <li><a href="#">Recept 1</a></li>
+                    <li><a href="#">Recept 2</a></li>
+                </ul>
+            </li>
+            <li><a href="#" onclick="toggleMenu('salads')">Saláty</a>
+                <ul id="salads" class="submenu">
+                    <li><a href="#">Recept 1</a></li>
+                    <li><a href="#">Recept 2</a></li>
+                </ul>
+            </li>
+            <li><a href="#" onclick="toggleMenu('cakes')">Koláče</a>
+                <ul id="cakes" class="submenu">
+                    <li><a href="#">Recept 1</a></li>
+                    <li><a href="#">Recept 2</a></li>
+                </ul>
+            </li>
+            <li><a href="#" onclick="toggleMenu('cakes')">Dorty</a>
+                <ul id="cakes" class="submenu">
+                    <li><a href="#">Recept 1</a></li>
+                    <li><a href="#">Recept 2</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="recipes">
+        <div class="recipe">
+            <h2>Recept 1</h2>
+            <img src="https://via.placeholder.com/300" alt="Těstoviny">
+            <p>Popis receptu...</p>
+        </div>
+        <div class="recipe">
+            <h2>Recept 2</h2>
+            <img src="https://via.placeholder.com/300" alt="Salát">
+            <p>Popis receptu...</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Recepty. Všechna práva vyhrazena.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
