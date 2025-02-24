@@ -5,37 +5,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recepty</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* CSS pro pozadí */
+        .background-image {
+            background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Ftripjive.com%2Fculinary-adventures-food-tourism-for-specific-groups%2F&psig=AOvVaw0PYwibkLo8LRwv3O6kd2ry&ust=1740494747260000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCJDZr6zG3IsDFQAAAAAdAAAAABAT');
+            background-size: cover;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        /* Styly pro nadpis */
+        header h1 {
+            text-align: center;
+            font-size: 3em;
+            margin-top: 20px;
+            color: white;
+        }
+
+        /* Menu styl */
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav li {
+            margin-right: 20px;
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+
+        nav li:hover {
+            text-decoration: underline;
+        }
+
+        .submenu {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav li:hover .submenu {
+            display: block;
+        }
+
+        .recipe {
+            display: none;
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            max-width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .recipe h2 {
+            text-align: center;
+            font-size: 2em;
+        }
+
+        .recipe h3 {
+            margin-top: 20px;
+            font-size: 1.5em;
+        }
+
+        .recipe p {
+            font-size: 1.2em;
+        }
+    </style>
 </head>
 <body>
-    <!-- Obrázek na pozadí přes celou obrazovku (kromě nadpisu) -->
+    <!-- Obrázek na pozadí -->
     <div class="background-image"></div>
 
     <header>
         <h1>Recepty</h1>
     </header>
 
+    <!-- Navigace -->
     <nav>
         <ul>
-            <li><a href="#" onclick="toggleMenu('pastas')">Těstoviny</a>
-                <ul id="pastas" class="submenu">
+            <li><a href="#">Těstoviny</a>
+                <ul class="submenu">
                     <li><a href="#">Recept 1</a></li>
                     <li><a href="#">Recept 2</a></li>
                 </ul>
             </li>
-            <li><a href="#" onclick="toggleMenu('salads')">Saláty</a>
-                <ul id="salads" class="submenu">
-                    <li><a href="#">Recept 1</a></li>
-                    <li><a href="#">Recept 2</a></li>
+            <li><a href="#">Saláty</a>
+                <ul class="submenu">
+                    <li><a href="#" onclick="showRecipe('cesar-salad')">César salát</a></li>
+                    <li><a href="#" onclick="showRecipe('shrimp-salad')">Salát s krevetami</a></li>
                 </ul>
             </li>
-            <li><a href="#" onclick="toggleMenu('cakes')">Koláče</a>
-                <ul id="cakes" class="submenu">
-                    <li><a href="#">Recept 1</a></li>
-                    <li><a href="#">Recept 2</a></li>
-                </ul>
-            </li>
-            <li><a href="#" onclick="toggleMenu('cakes')">Dorty</a>
-                <ul id="cakes" class="submenu">
+            <li><a href="#">Koláče</a>
+                <ul class="submenu">
                     <li><a href="#">Recept 1</a></li>
                     <li><a href="#">Recept 2</a></li>
                 </ul>
@@ -43,26 +116,84 @@
         </ul>
     </nav>
 
+    <!-- Recepty -->
     <section class="recipes">
-        <div class="recipe">
-            <h2>Recept 1</h2>
-            <img src="https://via.placeholder.com/300" alt="Těstoviny">
-            <p>Popis receptu...</p>
+        <div id="cesar-salad" class="recipe">
+            <h2>César salát</h2>
+            <h3>Ingredience:</h3>
+            <p>1 hlávka římského salátu (nebo 2 menší)<br>
+               100 g křupavých krutónů<br>
+               50 g parmazánu (strouhaný)<br>
+               1 kuřecí prso (grilované nebo pečené, nakrájené na plátky)</p>
+
+            <h3>Na dresink:</h3>
+            <p>2 stroužky česneku (drcené)<br>
+               2 žloutky<br>
+               1 lžíce dijonské hořčice<br>
+               2 lžíce citronové šťávy<br>
+               4 lžíce olivového oleje<br>
+               2 lžíce worcesterské omáčky<br>
+               Sůl a čerstvě mletý pepř podle chuti<br>
+               50 g strouhaného parmazánu</p>
+
+            <h3>Postup:</h3>
+            <p><strong>Dresink:</strong> V misce smíchejte žloutky, dijonskou hořčici, citronovou šťávu a česnek. Přidejte worcesterskou omáčku a olivový olej. Dobře promíchejte, dokud se všechny ingredience nespojí. Dochutíme solí, pepřem a přidejte strouhaný parmazán. Vše důkladně promíchejte, dokud vznikne hladká konzistence.</p>
+
+            <p><strong>Salát:</strong> Římský salát opláchněte, osušte a natrhejte na menší kousky. Vložte do velké mísy.</p>
+
+            <p><strong>Kombinování:</strong> K salátu přidejte dresink a dobře promíchejte, aby se salát obalil. Poté přidejte křupavé krutóny a nakrájené kuřecí prso.</p>
+
+            <p><strong>Servírování:</strong> Na závěr posypte salát strouhaným parmazánem a ihned podávejte.</p>
         </div>
-        <div class="recipe">
-            <h2>Recept 2</h2>
-            <img src="https://via.placeholder.com/300" alt="Salát">
-            <p>Popis receptu...</p>
+
+        <div id="shrimp-salad" class="recipe">
+            <h2>Salát s krevetami</h2>
+            <h3>Ingredience:</h3>
+            <p>200 g krevet (oloupané, očištěné, ideálně vařené nebo grilované)<br>
+               1 hlávka římského salátu<br>
+               1 avokádo (nakrájené na plátky)<br>
+               1 rajče (nakrájené na kostičky)<br>
+               1/2 červené cibule (nakrájené na jemno)<br>
+               50 g feta sýra (pokud máš ráda, můžeš přidat více)<br>
+               1 lžíce olivového oleje<br>
+               1 lžíce balzamikového octa<br>
+               Sůl a čerstvě mletý pepř</p>
+
+            <h3>Na dresink:</h3>
+            <p>2 lžíce olivového oleje<br>
+               1 lžíce citronové šťávy<br>
+               1/2 lžičky dijonské hořčice<br>
+               Sůl a pepř podle chuti<br>
+               1 lžička medu (volitelné)</p>
+
+            <h3>Postup:</h3>
+            <p><strong>Příprava dresinku:</strong> V malé misce smíchejte olivový olej, citronovou šťávu, dijonskou hořčici, sůl, pepř a med (pokud používáte). Dobře promíchejte, dokud dresink nebude hladký.</p>
+
+            <p><strong>Příprava salátu:</strong> Římský salát opláchněte a nakrájejte na menší kousky. Vložte do mísy. Přidejte nakrájené avokádo, rajče, červenou cibuli a fetu. Můžete přidat i jiné ingredience podle chuti (např. okurky, paprika).</p>
+
+            <p><strong>Příprava krevet:</strong> Pokud máte syrové krevety, rychle je opečte na pánvi s trochou olivového oleje, dokud nezískají růžovou barvu (asi 2-3 minuty na každé straně). Pokud jsou již vařené, stačí je jen prohřát na pánvi.</p>
+
+            <p><strong>Kombinování:</strong> Krevety přidejte do mísy s ostatními ingrediencemi. Přidejte připravený dresink a vše jemně promíchejte.</p>
+
+            <p><strong>Servírování:</strong> Salát můžete ihned servírovat, případně posypat trochou strouhaného parmazánu nebo dalších bylinek (např. bazalky).</p>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2025 Recepty. Všechna práva vyhrazena.</p>
-    </footer>
-
-    <script src="scripts.js"></script>
+    <script>
+        // Skript pro zobrazení receptů
+        function showRecipe(recipeId) {
+            // Skryje všechny recepty
+            var recipes = document.querySelectorAll('.recipe');
+            recipes.forEach(function(recipe) {
+                recipe.style.display = 'none';
+            });
+            // Zobrazí konkrétní recept
+            document.getElementById(recipeId).style.display = 'block';
+        }
+    </script>
 </body>
 </html>
+
 
 
 
