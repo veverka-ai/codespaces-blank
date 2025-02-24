@@ -4,24 +4,43 @@ body, h1, h2, p, ul {
     padding: 0;
 }
 
+/* Obrázek na pozadí přes celou obrazovku (kromě nadpisu) */
+.background-image {
+    background-image: url('https://tripjive.com/wp-content/uploads/2024/02/culinary-tours-for-special-interests-1024x585.jpg'); /* Změň na správnou URL obrázku */
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; /* Obrázek bude za obsahem stránky */
+    height: 100%;
+}
+
 /* Styl pro hlavičku */
 header {
-    background-color: #e01078;
+    background-color: rgba(0, 0, 0, 0.5); /* Poloprůhledné pozadí pro čitelnost */
     color: white;
-    padding: 20px;
     text-align: center;
+    padding: 50px 20px;
+}
+
+header h1 {
+    font-size: 3em; /* Zvýšení velikosti nadpisu */
+    margin: 0;
 }
 
 /* Styl pro navigaci */
 nav {
     display: flex;
-    justify-content: center; /* Centering the menu */
+    justify-content: center; /* Centrované menu */
     background-color: #333;
 }
 
 nav ul {
     list-style-type: none;
-    display: flex; /* Ensure the list items are in a row */
+    display: flex; /* Menu v řadě */
     padding: 0;
 }
 
@@ -32,9 +51,10 @@ nav ul li {
 nav ul li a {
     display: block;
     color: white;
-    padding: 14px 20px;
+    padding: 20px 30px;
     text-decoration: none;
     text-align: center;
+    font-size: 1.5em; /* Větší písmo pro podkategorie */
 }
 
 nav ul li a:hover {
@@ -53,7 +73,7 @@ nav ul li a:hover {
 }
 
 .submenu li a {
-    padding: 10px;
+    padding: 15px;
     color: white;
     text-align: left;
 }
@@ -100,3 +120,5 @@ footer {
     text-align: center;
     padding: 10px 0;
 }
+
+
