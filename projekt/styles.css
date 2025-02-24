@@ -6,7 +6,7 @@ body, h1, h2, p, ul {
 
 /* Obrázek na pozadí přes celou obrazovku (kromě nadpisu) */
 .background-image {
-    background-image: url('https://togetherintheuk.co.uk/wp-content/uploads/2023/05/Food-photo-1-2-1024x463.jpg'); /* Změň na správnou URL obrázku */
+    background-image: url('https://t3.ftcdn.net/jpg/02/52/38/80/360_F_252388016_KjPnB9vglSCuUJAumCDNbmMzGdzPAucK.jpg'); /* Změň na správnou URL obrázku */
     background-position: center;
     background-size: cover;
     position: absolute;
