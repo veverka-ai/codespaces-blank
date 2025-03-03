@@ -40,7 +40,7 @@ nav li:hover {
 .submenu {
     display: none;
     position: absolute;
-    background-color: #df4141;
+    background-color: #fff;
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -53,17 +53,17 @@ nav li:hover .submenu {
 /* Upravené podmenu pro červenou barvu při najetí */
 nav li:hover {
     background-color: #D32F2F;
-    color: rgb(218, 46, 46);
+    color: white;
 }
 
 nav li:hover .submenu li a:hover {
     background-color: #D32F2F;
-    color: rgb(236, 19, 19);
+    color: white;
 }
 
 .recipe {
     display: none;
-    background-color: rgb(216, 40, 40);
+    background-color: white;
     padding: 20px;
     margin-top: 20px;
     border-radius: 10px;
@@ -85,6 +85,5 @@ nav li:hover .submenu li a:hover {
 .recipe p {
     font-size: 1.2em;
 }
-
 
 
