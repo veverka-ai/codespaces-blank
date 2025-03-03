@@ -1,124 +1,90 @@
-/* Reset stylů pro základní vzhled */
-body, h1, h2, p, ul {
-    margin: 0;
-    padding: 0;
-}
-
-/* Obrázek na pozadí přes celou obrazovku (kromě nadpisu) */
+/* CSS pro pozadí */
 .background-image {
-    background-image: url('https://t3.ftcdn.net/jpg/02/52/38/80/360_F_252388016_KjPnB9vglSCuUJAumCDNbmMzGdzPAucK.jpg'); /* Změň na správnou URL obrázku */
-    background-position: center;
+    background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Ftripjive.com%2Fculinary-adventures-food-tourism-for-specific-groups%2F&psig=AOvVaw0PYwibkLo8LRwv3O6kd2ry&ust=1740494747260000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCJDZr6zG3IsDFQAAAAAdAAAAABAT');
     background-size: cover;
     position: absolute;
+    width: 100%;
+    height: 100%;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1; /* Obrázek bude za obsahem stránky */
-    height: 100%;
+    z-index: -1;
 }
 
-/* Styl pro hlavičku */
-header {
-    background-color: rgba(0, 0, 0, 0.5); /* Poloprůhledné pozadí pro čitelnost */
-    color: white;
-    text-align: center;
-    padding: 50px 20px;
-}
-
+/* Styly pro nadpis */
 header h1 {
-    font-size: 3em; /* Zvýšení velikosti nadpisu */
-    margin: 0;
+    text-align: center;
+    font-size: 3em;
+    margin-top: 20px;
+    color: white;
 }
 
-/* Styl pro navigaci */
-nav {
-    display: flex;
-    justify-content: center; /* Centrované menu */
-    background-color: #333;
-}
-
+/* Menu styl */
 nav ul {
     list-style-type: none;
-    display: flex; /* Menu v řadě */
     padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
-nav ul li {
-    position: relative;
+nav li {
+    margin-right: 20px;
+    font-size: 1.5em;
+    cursor: pointer;
 }
 
-nav ul li a {
-    display: block;
-    color: white;
-    padding: 20px 30px;
-    text-decoration: none;
-    text-align: center;
-    font-size: 1.5em; /* Větší písmo pro podkategorie */
+nav li:hover {
+    text-decoration: underline;
 }
 
-nav ul li a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-/* Podmenu */
 .submenu {
     display: none;
     position: absolute;
-    top: 50px;
-    left: 0;
-    background-color: #333;
-    width: 200px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.submenu li a {
-    padding: 15px;
-    color: white;
-    text-align: left;
-}
-
-.submenu li a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-/* Když se menu otevře */
-nav ul li:hover .submenu {
+nav li:hover .submenu {
     display: block;
 }
 
-/* Sekce s recepty */
-.recipes {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px;
-    background-color: #D32F2F; /* Červené pozadí pro recepty */
+/* Upravené podmenu pro červenou barvu při najetí */
+nav li:hover {
+    background-color: #D32F2F;
+    color: white;
+}
+
+nav li:hover .submenu li a:hover {
+    background-color: #D32F2F;
+    color: white;
 }
 
 .recipe {
-    width: 45%;
-    margin: 10px;
-    border: 1px solid #ddd;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: white; /* Bílý pozadí pro každou kartu receptu */
+    display: none;
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.recipe img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-/* Patka */
-footer {
-    background-color: #333;
-    color: white;
+.recipe h2 {
     text-align: center;
-    padding: 10px 0;
+    font-size: 2em;
 }
+
+.recipe h3 {
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+
+.recipe p {
+    font-size: 1.2em;
+}
+
 
 
