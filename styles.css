@@ -1,38 +1,67 @@
-@keyframes changeBackground {
-    0% {
-        background: linear-gradient(to right, red, yellow, green, blue, purple, pink, brown, beige, orange);
-    }
-    25% {
-        background: linear-gradient(to right, orange, beige, brown, pink, purple, blue, green, yellow, red);
-    }
-    50% {
-        background: linear-gradient(to right, green, blue, purple, pink, brown, beige, orange, red, yellow);
-    }
-    75% {
-        background: linear-gradient(to right, purple, pink, brown, beige, orange, red, yellow, green, blue);
-    }
-    100% {
-        background: linear-gradient(to right, red, yellow, green, blue, purple, pink, brown, beige, orange);
-    }
-}
 
 body {
-    animation: changeBackground 10s infinite;
-    background-size: 400% 400%;
-}
-
-.sloupce {
-    width:100%;
-    height: auto;
-    display: flex;
+    font-family: Arial, sans-serif;
+    background-color: #f8e0e6; 
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
 
-.obrazek{
-width:33%;
-height:auto;
+header {
+    background-color: #f1c1d1; 
+    text-align: center;
+    padding: 20px;
 }
-img {
-    width: 100%;
-    height: auto;
+
+h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+
+.about {
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 2em;
+    color: #d15e91; 
+}
+
+
+.categories ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.categories ul li {
+    margin: 10px 0;
+}
+
+.categories a {
+    text-decoration: none;
+    font-size: 1.5em;
+    color: #d15e91; 
+    transition: color 0.3s ease;
+}
+
+.categories a:hover {
+    color: #b13b70; 
+}
+
+
+footer {
+    text-align: center;
+    background-color: #f1c1d1;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
 }
