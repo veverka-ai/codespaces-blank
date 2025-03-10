@@ -1,89 +1,67 @@
-/* CSS pro pozadí */
-.background-image {
-    background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Ftripjive.com%2Fculinary-adventures-food-tourism-for-specific-groups%2F&psig=AOvVaw0PYwibkLo8LRwv3O6kd2ry&ust=1740494747260000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCJDZr6zG3IsDFQAAAAAdAAAAABAT');
-    background-size: cover;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -1;
+/* Základní styl pro celou stránku */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8e0e6; /* Světle růžová barva pozadí */
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
-/* Styly pro nadpis */
-header h1 {
+/* Styl pro hlavičku */
+header {
+    background-color: #f1c1d1; /* Světlejší růžová */
     text-align: center;
-    font-size: 3em;
-    margin-top: 20px;
-    color: white;
+    padding: 20px;
 }
 
-/* Menu styl */
-nav ul {
+h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+/* Styl pro sekci O nás */
+.about {
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 2em;
+    color: #d15e91; /* Růžová barva pro nadpisy */
+}
+
+/* Styl pro seznam kategorií */
+.categories ul {
     list-style-type: none;
     padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
 }
 
-nav li {
-    margin-right: 20px;
+.categories ul li {
+    margin: 10px 0;
+}
+
+.categories a {
+    text-decoration: none;
     font-size: 1.5em;
-    cursor: pointer;
+    color: #d15e91; /* Růžová barva pro odkazy */
+    transition: color 0.3s ease;
 }
 
-nav li:hover {
-    text-decoration: underline;
+.categories a:hover {
+    color: #b13b70; /* Tmavší růžová při hoveru */
 }
 
-.submenu {
-    display: none;
-    position: absolute;
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-nav li:hover .submenu {
-    display: block;
-}
-
-/* Upravené podmenu pro červenou barvu při najetí */
-nav li:hover {
-    background-color: #D32F2F;
-    color: white;
-}
-
-nav li:hover .submenu li a:hover {
-    background-color: #D32F2F;
-    color: white;
-}
-
-.recipe {
-    display: none;
-    background-color: white;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 10px;
-    max-width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.recipe h2 {
+/* Styl pro patičku */
+footer {
     text-align: center;
-    font-size: 2em;
-}
-
-.recipe h3 {
+    background-color: #f1c1d1;
+    padding: 10px;
     margin-top: 20px;
-    font-size: 1.5em;
 }
 
-.recipe p {
-    font-size: 1.2em;
+footer p {
+    margin: 0;
 }
-
-
