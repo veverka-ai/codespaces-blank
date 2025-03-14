@@ -5,6 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Koláčovna</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .categories {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+        .categories ul {
+            list-style: none;
+            padding: 0;
+        }
+        .categories img {
+            width: 50%;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -17,12 +33,14 @@
     </section>
 
     <section class="categories about">
-        <h2>Naše kategorie</h2>
-        <ul>
-            <li><a href="sladkekolace.html">Sladké koláče</a></li>
-            <li><a href="slanekolace.html">Slané koláče</a></li>
-        </ul>
-        <img src="https://d1pbny5bq445o3.cloudfront.net/blog-seamless/wp-content/uploads/2021/03/12183951/pies.jpeg" alt="Koláče" style="width: 30%; border-radius: 30px; margin-top: 15px;">
+        <div>
+            <h2>Naše kategorie</h2>
+            <ul>
+                <li><a href="sladkekolace.html">Sladké koláče</a></li>
+                <li><a href="slanekolace.html">Slané koláče</a></li>
+            </ul>
+        </div>
+        <img src="https://d1pbny5bq445o3.cloudfront.net/blog-seamless/wp-content/uploads/2021/03/12183951/pies.jpeg" alt="Koláče">
     </section>
 
     <footer>
@@ -31,6 +49,5 @@
 
 </body>
 </html>
-
 
 
